@@ -20,5 +20,8 @@ class blogs(models.Model):
     blog=models.TextField()
     date_time=models.DateTimeField()
     def __str__(self):
-        return self.username,self.title
+        user_name=self.username
+        blog_title=self.title
+        title=user_name+" "+blog_title
+        return title
     

@@ -14,14 +14,16 @@ def login_page(request):
             login(request, user)
             return redirect('home')
        else:
-            return redirect('login.html')
+            return redirect('login_page')
     return render(request,'login.html')
 
 
 def home(request):
+    user_name=str(request.user)
     if request.user.is_authenticated:
         data=blogs.objects.all()
-        return render(request,'home.html',{'data':data})
+        
+        return render(request,'home.html',{'data':data,'user_name':user_name,})
     else:
         return redirect('login_page')
 
@@ -65,7 +67,8 @@ def signup(request):
     return render(request,'signup.html')
 
 
-
+def experiment(request):
+    return render(request,'experiment.html')
 
 
 
