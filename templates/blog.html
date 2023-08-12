@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block bodystyle %}
+style="background-image:url(https://source.unsplash.com/collection/928423/1920x1080); width: 100vw; height: 91.3vh;"
+{% endblock bodystyle %}
+{% block body %}
+    <div>
+        <form method="post" style="display: flex;  justify-content: center; align-items: flex-start;margin-left:40px;flex-flow: column; padding-top: 60px;">
+            {% csrf_token %}
+            <input type="text" name="title" placeholder="Title" style=" background-color:rgb(0,0,0,0.5);backdrop-filter: blur(10px); border:none; color: white ;padding: 20px; font-size: xx-large; width: 50vw; height: 80px; border-radius: 30px; margin: 30px;" required>
+            <button class="btn-2 btn" style="align-self: flex-end; font-size:x-large; height: 50px; width: 150px; margin-right: 120px; border-radius: 10px; background-color: aquamarine;">Save</button>
+            <textarea name="blog" placeholder="Welcome to Blogger" cols="30" rows="10" style="box-shadow: 0 0 20px black; background-color:rgb(255,255,255,0.4);backdrop-filter: blur(10px);padding: 20px;border-color: black ;font-size: large;color: black ;width: 90vw;border: none;margin-top:30px;height: 50vh; border-radius: 10px; text-align: start;" required></textarea>
+        </form>
+    </div>
+
+    <style>
+
+
+        body{
+          font-family: 'Montserrat', sans-serif;
+          margin:0;
+        }
+    
+        .container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          flex-wrap: wrap;
+          width: 80vw;
+          margin: 0 auto;
+          min-height: 100vh;
+        }
+        .btn {
+          text-align: center;
+          text-transform: uppercase;
+          transition: 0.5s;
+          background-size: 200% auto;
+          color: white;
+        /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+          
+          border-radius: 10px;
+        }
+    
+        .btn:hover {
+          background-position: right center; /* change the direction of the change here */
+        }
+    
+        .btn-2 {
+          background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+        }
+              
+    </style>
+    
+{% endblock body %}
+
+
+            

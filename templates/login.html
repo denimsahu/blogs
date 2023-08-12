@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body style="background-color:grey">
+    <div id='mydiv' >
+    <form id="myform"method='post' style="display: flex; flex-direction: column;">
+            {% csrf_token %}
+            <h1 style="color:white">Login</h1>
+            <input style="background-color:rgb(255,255,255,0.2);" id="username" class="elements" type="text" name='username' placeholder="Username" required>
+            <input style="background-color:rgb(255,255,255,0.2);" id="password1"class="elements" type="password" name='password' placeholder="Password" required>
+            <div style="display:flex; flex-direction: row; align-items:center; justify-content:space-between;width:25vw;">
+                <button id="button" class="elements">Login</button>
+                <a style="font-size: large; color:aliceblue; font-size: larger; font-weight: 800;" href="signup/">Sign Up</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+<style>
+    #myform{
+        width: 30vw;
+        height: 65vh;
+        border-radius: 50px;
+        background:rgb(0,0,0,0.7);
+        margin: 20px;
+        padding: 20px;
+        size: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter:blur(10px);
+    }
+
+    #mydiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center; 
+        height: 100vh;
+    }
+
+    #button{
+        margin-top: 30px;
+        height: 40px;
+        width: 100px;
+        align-self: flex-start;
+        color:black;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        font-weight:bold;
+    }
+
+    .elements{
+        margin: 10px;
+        width: 300px;
+        height: 30px;
+        margin: 15px;
+        padding: 10px;
+        border-radius: 3px;
+        border-color: rgb(0,0,0,0.2);
+        color: white;
+        font-size:medium;
+    }
+</style>

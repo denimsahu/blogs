@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Home Page{% endblock title %}
+
+{% block body %}
+<div style="display: flex;background-image:url(https://source.unsplash.com/collection/928423/1920x1080); background-repeat: no-repeat;">
+    <div style="width: 300px;overflow-x:hidden; overflow-y:auto; height:87.4vh; background-color: gray;margin: 15px; border-radius: 40px;">
+        <div style="position: fixed; background-color: bisque; display: flex; width:inherit;padding:10px; border-top-left-radius: 40px;" >
+            <h1>Welcome</h1>
+            <button style="align-self:center; margin-left: auto; border-radius: 5px; width: 80px;"><a href="blog" style="color: black; text-decoration: none;">Add</a></button>
+        </div>
+        <div style="margin-top:80px; margin-left: 20px;margin-right: 20px;">
+            <ul>
+                {% for blog in  data%}
+                    <li>{{blog.title}}</li>
+                {% endfor %}
+            </ul>
+            
+        </div>
+    </div>
+    <div style="flex-grow:4;">
+        
+    </div>
+</div>
+{% endblock body %}
