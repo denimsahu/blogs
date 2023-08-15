@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 {% endblock head %}
 {% block body %}
-<div style="height: 92.2vh; display: flex;background-image:url(https://source.unsplash.com/collection/928423/1920x1080); background-repeat: no-repeat;">
+<div style="height: 91.3vh; display: flex;background-image:url(https://source.unsplash.com/collection/928423/1920x1080); background-repeat: no-repeat;">
     <div style="width: 300px;overflow-x:hidden; overflow-y:auto; height:87.4vh; background-color: gray;margin: 15px; border-radius: 40px;">
         <div style="position: fixed; background-color: bisque; display: flex; width:inherit;padding:10px; border-top-left-radius: 40px;" >
             <h1>Blogs</h1>
@@ -49,12 +49,12 @@
     </div>
 
     {% if blog_content == null %}
-        <div style="display:none">hello</div>
+        
         {% else %}
-            <div id="closable" style="width:55vw;display: flex;flex-direction: column ;padding: 30px ;border:solid white 2px; margin:40px; height: 700px; align-self: center; justify-self: center; border-radius: 10px; border-color: 0,0,0,0.9; backdrop-filter: blur(20px);">
+            <div id="closable" style="width:50vw;display: flex;flex-direction: column ;padding: 30px ;border:solid white 2px; margin:40px; height: 700px; align-self: center; justify-self: center; border-radius: 10px; border-color: 0,0,0,0.9; backdrop-filter: blur(20px);">
                 <button  id="myButton" style="align-self: flex-end; background: none; border: none; width: 50px"><h3>X</h3></button>
                 <h2 style="align-self: center; color:black;font-weight: 900;position: fixed;">{{blog_title}}</h2>
-                <h3 style="overflow-y: auto;height: 600px ;align-self: center;color:black;font: weight 200px;margin-top: 30px ;">{{blog_content}}</h3>
+                <h3 style="width: 700px;padding: 5px ;border-radius: 5px; background-color:rgb(0,0,0,0.5);backdrop-filter: blur(5px);overflow-y: auto;height: 600px ;align-self: center;color:white;font: weight 200px;margin-top: 30px ;">{{blog_content}}</h3>
 
                 {% if blog_author == user_name%}
                     <form method="post" style="display: flex; justify-content: space-between; margin: 10px;">
