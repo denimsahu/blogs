@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 {% endblock head %}
 {% block body %}
-<div style="height: 91.3vh; display: flex;background-image:url(https://source.unsplash.com/collection/928423/1920x1080); background-repeat: no-repeat;">
+<div style="height: 91.3vh; display: flex;background-image:url(https://picsum.photos/1920/1080); background-repeat: no-repeat;">
     <div style="width: 300px;overflow-x:hidden; overflow-y:auto; height:87.4vh; background-color: gray;margin: 15px; border-radius: 40px;">
         <div style="position: fixed; background-color: bisque; display: flex; width:inherit;padding:10px; border-top-left-radius: 40px;" >
             <h1>Blogs</h1>
@@ -16,8 +16,8 @@
                     <form method="post">
                         {% csrf_token %}
                         <button name='selected_blog' value="{{ blog.pk }}" style="display: flex; flex-direction: column; margin: 10px; border-radius: 10px; padding: 10px; background-color: aliceblue; width: 250px;">
-                            <h3 style="color:black">{{blog.title}}</h3>
-                            <p style="margin: 0px; margin-left: 150px;">~{{blog.username}}</p>
+                            <h3 style="margin:0px;color:black">{{blog.title}}</h3>
+                            <p style="margin:0px;align-self: flex-end;">~{{blog.username}}</p>
                         </button>
                     </form>
                 {% endfor %}
